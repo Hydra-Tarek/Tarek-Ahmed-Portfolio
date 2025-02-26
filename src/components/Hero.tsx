@@ -27,7 +27,7 @@ const Hero = () => {
                 <img alt="Mechanical Engineer" src="/lovable-uploads/ab4955f2-dfd9-44af-b939-8ca922cbb035.jpg" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-2 -right-2 bg-engineer-light rounded-full p-2">
-                <img src="https://cdn-icons-png.flaticon.com/512/6461/6461431.png" alt="Engineering Icon" className="w-12 h-12" />
+                
               </div>
             </div>
           </div>

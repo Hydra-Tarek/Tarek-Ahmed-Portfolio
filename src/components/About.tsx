@@ -1,40 +1,29 @@
-
 import { Award, Calendar, Briefcase, GraduationCap } from "lucide-react";
-
 const About = () => {
-  const experiences = [
-    {
-      title: "Senior Mechanical Engineer",
-      company: "InnoTech Engineering",
-      period: "2020 - Present",
-      description:
-        "Lead mechanical design for cutting-edge aerospace components, managing a team of 5 engineers.",
-      icon: <Briefcase className="h-5 w-5" />,
-    },
-    {
-      title: "Mechanical Design Engineer",
-      company: "NextGen Solutions",
-      period: "2016 - 2020",
-      description:
-        "Designed and optimized mechanical systems for automotive applications using CAD and simulation tools.",
-      icon: <Calendar className="h-5 w-5" />,
-    },
-    {
-      title: "M.S. Mechanical Engineering",
-      company: "Stanford University",
-      period: "2014 - 2016",
-      description:
-        "Specialized in robotics and mechanical design with thesis on energy-efficient actuators.",
-      icon: <GraduationCap className="h-5 w-5" />,
-    },
-  ];
-
-  return (
-    <section id="about" className="section-padding bg-engineer-dark">
+  const experiences = [{
+    title: "Senior Mechanical Engineer",
+    company: "InnoTech Engineering",
+    period: "2020 - Present",
+    description: "Lead mechanical design for cutting-edge aerospace components, managing a team of 5 engineers.",
+    icon: <Briefcase className="h-5 w-5" />
+  }, {
+    title: "Mechanical Design Engineer",
+    company: "NextGen Solutions",
+    period: "2016 - 2020",
+    description: "Designed and optimized mechanical systems for automotive applications using CAD and simulation tools.",
+    icon: <Calendar className="h-5 w-5" />
+  }, {
+    title: "M.S. Mechanical Engineering",
+    company: "Stanford University",
+    period: "2014 - 2016",
+    description: "Specialized in robotics and mechanical design with thesis on energy-efficient actuators.",
+    icon: <GraduationCap className="h-5 w-5" />
+  }];
+  return <section id="about" className="section-padding bg-engineer-dark">
       <div className="container mx-auto container-padding">
         <div className="flex flex-col items-center mb-12">
           <p className="text-engineer-light font-medium uppercase tracking-wider mb-2">About Me</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white">My Background</h2>
+          <h2 className="text-3xl text-white md:text-3xl font-bold">Educational Background</h2>
           <div className="h-1 w-20 bg-engineer-light mt-4 rounded-full"></div>
         </div>
 
@@ -64,11 +53,7 @@ const About = () => {
           </div>
 
           <div className="space-y-4 animate-fade-in-right">
-            {experiences.map((exp, index) => (
-              <div 
-                key={index} 
-                className="bg-engineer-surface p-6 rounded-lg border-l-4 border-engineer-light hover-scale"
-              >
+            {experiences.map((exp, index) => <div key={index} className="bg-engineer-surface p-6 rounded-lg border-l-4 border-engineer-light hover-scale">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="rounded-full bg-engineer-light/20 p-2 text-engineer-light">
                     {exp.icon}
@@ -80,13 +65,10 @@ const About = () => {
                 </div>
                 <p className="text-white/70 text-sm mb-2">{exp.period}</p>
                 <p className="text-white/80">{exp.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
