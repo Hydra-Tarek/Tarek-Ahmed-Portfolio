@@ -32,7 +32,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between container-padding">
         <a href="#" className="flex items-center gap-2">
           <div className="h-10 w-10 rounded-full bg-engineer-light flex items-center justify-center border-2 border-white shadow-lg">
-            <span className="text-white font-bold text-xl">M</span>
+            <span className="text-white font-bold text-xl">T</span>
           </div>
           <span className="text-white text-lg hidden sm:inline-block font-medium">Tarek Ahmed</span>
         </a>
