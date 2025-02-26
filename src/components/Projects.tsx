@@ -1,8 +1,9 @@
+
 import { useState, useEffect } from "react";
-import ProjectCard, { ProjectProps } from "./ProjectCard";
+import ProjectCard from "./ProjectCard";
+import { ProjectProps, ProjectFile } from "@/types/project";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
-import { ProjectFile } from "@/types/project";
 import { toast } from "sonner";
 
 const Projects = () => {
