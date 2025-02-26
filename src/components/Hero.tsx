@@ -8,7 +8,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="order-2 md:order-1 animate-fade-in-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Hi, I am <span className="text-engineer-light">Alex</span>
+              Hi, I am <span className="text-engineer-light">Tarek</span>
               <br />
               Mechanical Engineer
             </h1>
