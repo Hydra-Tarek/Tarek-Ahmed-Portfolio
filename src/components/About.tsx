@@ -30,24 +30,22 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
             <h3 className="text-2xl font-semibold text-white mb-4">Who I Am</h3>
-            <p className="text-white/80 mb-6">
-              I'm a passionate mechanical engineer with over 7 years of experience in designing, analyzing, and optimizing mechanical systems. I specialize in precision engineering, 3D modeling, and innovative problem-solving.
-            </p>
+            <p className="text-white/80 mb-6">I am a mechanical engineer with expertise in machine learning, renewable energy, and product design. Skilled in Python, Arduino, and SolidWorks, I apply technology to engineering solutions like solar power design, aerodynamics, and IoT-based security systems.</p>
             <p className="text-white/80 mb-6">
               My approach combines technical expertise with creative thinking to develop elegant solutions to complex engineering challenges. I'm particularly interested in sustainable design and the integration of mechanical systems with new technologies.
             </p>
             <div className="flex flex-wrap gap-6 mt-8">
               <div className="flex items-center gap-2">
                 <Award className="text-engineer-light h-5 w-5" />
-                <span className="text-white">7+ Years Experience</span>
+                <span className="text-white">Recently Graduated</span>
               </div>
               <div className="flex items-center gap-2">
                 <Award className="text-engineer-light h-5 w-5" />
-                <span className="text-white">20+ Projects Completed</span>
+                <span className="text-white">10+ Projects Completed</span>
               </div>
               <div className="flex items-center gap-2">
                 <Award className="text-engineer-light h-5 w-5" />
-                <span className="text-white">5 Patents Filed</span>
+                <span className="text-white">1 Journal Paper & 1 Conference Paper</span>
               </div>
             </div>
           </div>
