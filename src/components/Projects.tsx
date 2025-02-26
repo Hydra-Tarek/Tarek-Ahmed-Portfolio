@@ -1,9 +1,46 @@
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ProjectCard, { ProjectProps } from "./ProjectCard";
 import { Button } from "@/components/ui/button";
+import { supabase } from "@/integrations/supabase/client";
+import { ProjectFile } from "@/types/project";
+import { toast } from "sonner";
 
 const Projects = () => {
+  const [projectFiles, setProjectFiles] = useState<Record<string, ProjectFile[]>>({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProjectFiles = async () => {
+      try {
+        const { data, error } = await supabase
+          .from('project_files')
+          .select('*');
+
+        if (error) {
+          throw error;
+        }
+
+        // Group files by project title
+        const groupedFiles = data.reduce((acc: Record<string, ProjectFile[]>, file) => {
+          if (!acc[file.project_title]) {
+            acc[file.project_title] = [];
+          }
+          acc[file.project_title].push(file as ProjectFile);
+          return acc;
+        }, {});
+
+        setProjectFiles(groupedFiles);
+      } catch (error) {
+        console.error('Error fetching project files:', error);
+        toast.error('Failed to load project files');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProjectFiles();
+  }, []);
+
   const projectsData: ProjectProps[] = [
     {
       title: "Robotic Arm Design",
@@ -11,7 +48,8 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1580383857470-d5eff2e1ff85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       tags: ["Robotics", "CAD", "Automation"],
       demoUrl: "#",
-      repoUrl: "#"
+      repoUrl: "#",
+      files: projectFiles["Robotic Arm Design"] || []
     },
     {
       title: "Drone Propulsion System",
