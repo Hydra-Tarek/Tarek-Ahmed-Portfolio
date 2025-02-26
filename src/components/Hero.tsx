@@ -1,9 +1,6 @@
-
 import { ArrowDown } from "lucide-react";
-
 const Hero = () => {
-  return (
-    <section className="min-h-screen flex items-center hero-gradient pt-16">
+  return <section className="min-h-screen flex items-center hero-gradient pt-16">
       <div className="container mx-auto container-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="order-2 md:order-1 animate-fade-in-left">
@@ -16,16 +13,10 @@ const Hero = () => {
               Designing and building innovative mechanical solutions with precision and creativity.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="#projects"
-                className="bg-engineer-light text-white px-6 py-3 rounded-md hover:bg-engineer-light/90 transition-colors focus-ring"
-              >
+              <a href="#projects" className="bg-engineer-light text-white px-6 py-3 rounded-md hover:bg-engineer-light/90 transition-colors focus-ring">
                 View Projects
               </a>
-              <a
-                href="#contact"
-                className="bg-transparent border border-white text-white px-6 py-3 rounded-md hover:bg-white/10 transition-colors focus-ring"
-              >
+              <a href="#contact" className="bg-transparent border border-white text-white px-6 py-3 rounded-md hover:bg-white/10 transition-colors focus-ring">
                 Get in Touch
               </a>
             </div>
@@ -33,18 +24,10 @@ const Hero = () => {
           <div className="order-1 md:order-2 flex justify-center animate-fade-in-right">
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
-                <img
-                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
-                  alt="Mechanical Engineer"
-                  className="w-full h-full object-cover"
-                />
+                <img alt="Mechanical Engineer" src="/lovable-uploads/ab4955f2-dfd9-44af-b939-8ca922cbb035.jpg" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-2 -right-2 bg-engineer-light rounded-full p-2">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/6461/6461431.png"
-                  alt="Engineering Icon"
-                  className="w-12 h-12"
-                />
+                <img src="https://cdn-icons-png.flaticon.com/512/6461/6461431.png" alt="Engineering Icon" className="w-12 h-12" />
               </div>
             </div>
           </div>
@@ -56,8 +39,6 @@ const Hero = () => {
           </a>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
