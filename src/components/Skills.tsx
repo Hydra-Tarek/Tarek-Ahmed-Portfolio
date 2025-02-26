@@ -1,12 +1,12 @@
 
-import { Tool, Settings, PenTool, Brain, Database, LucideIcon } from "lucide-react";
+import { ArrowRight, Settings, ArrowDown, Brain, ArrowUp } from "lucide-react";
 import SkillCard from "./SkillCard";
 
 const Skills = () => {
   const skillCategories = [
     {
       title: "Design & Modeling",
-      icon: <PenTool className="h-8 w-8" />,
+      icon: <ArrowRight className="h-8 w-8" />,
       skills: [
         "SolidWorks",
         "AutoCAD",
@@ -30,7 +30,7 @@ const Skills = () => {
     },
     {
       title: "Manufacturing & Prototyping",
-      icon: <Tool className="h-8 w-8" />,
+      icon: <ArrowDown className="h-8 w-8" />,
       skills: [
         "CNC Machining",
         "3D Printing",
